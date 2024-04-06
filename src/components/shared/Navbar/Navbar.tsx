@@ -36,7 +36,7 @@ const Navbar = () => {
   //   Menus
   const menus = [
     { title: "home", dropdown: null },
-    { title: "About", dropdown: null },
+    { title: "products", dropdown: null },
     {
       title: "Courses",
       dropdown: [
@@ -50,27 +50,7 @@ const Navbar = () => {
         },
       ],
     },
-    {
-      title: "Class",
-      dropdown: [
-        {
-          title: "Class",
-          dropdown: null,
-        },
-        {
-          title: "Class",
-          dropdown: null,
-        },
-        {
-          title: "Class",
-          dropdown: null,
-        },
-        {
-          title: "Class",
-          dropdown: null,
-        },
-      ],
-    },
+
     { title: "profile", dropdown: null },
   ];
 

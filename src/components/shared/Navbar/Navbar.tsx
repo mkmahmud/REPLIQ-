@@ -124,11 +124,16 @@ const Navbar = () => {
                 <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-primaryHover opacity-40 group-hover:animate-shine" />
               </button>
             ) : (
-              <MainButton
-                path="/auth"
-                content="log in / sign up"
-                icon="fa-right-to-bracket"
-              ></MainButton>
+              <div className="flex items-center">
+                <Link to="/cart" className="mx-4 text-large text-primary">
+                  <Font iconName="fa-shopping-cart"></Font>{" "}
+                </Link>
+                <MainButton
+                  path="/auth"
+                  content="log in / sign up"
+                  icon="fa-right-to-bracket"
+                ></MainButton>
+              </div>
             )}
           </li>
         </ul>

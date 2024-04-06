@@ -19,7 +19,7 @@ const ProductDetails = () => {
           <div className="mt-20"></div>
           <div className="md:flex space-x-2 w-full p-4 items-center">
             <div className="w-full md:w-1/2">
-              <img src={data.images[0]} alt="Image" />
+              <img src={data.images[0]} className="h-[500px] block mx-auto" alt="Image" />
             </div>
             <div className="w-full md:w-1/2 px-4">
               <div>

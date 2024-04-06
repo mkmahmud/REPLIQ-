@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../../Buttons/Button";
+import { addToCart } from "../../../../utils/localStorage";
 
 const ProductCard = ({ data }: any) => {
   return (
@@ -14,10 +15,12 @@ const ProductCard = ({ data }: any) => {
           <div className="p-4 ">
             <div>
               <h2 className="text-large font-bold">{data.productName}</h2>
-              <p className="flex space-x-2">
+              <p className="flex space-x-2 overflow-hidden">
                 {data &&
-                  data?.tags.map((tag:any,i:any) => (
-                    <span key={i} className="px-2 border rounded-full">{tag}</span>
+                  data.tags.map((tag: any, i: any) => (
+                    <span key={i} className="px-2 my-2 border rounded-full">
+                      {tag}
+                    </span>
                   ))}
               </p>
             </div>
@@ -29,10 +32,22 @@ const ProductCard = ({ data }: any) => {
       </Link>
       <div className="px-4  flex justify-between items-center  ">
         <div>
-          <h1 className="text-large text-primary font-bold">${data?.discountedPrice}</h1>
+          <h1 className="text-large text-primary font-bold">
+            ${data?.discountedPrice}
+          </h1>
           <del className="text-sm">${data?.price}</del>
         </div>
-        <div className="">
+        <div
+          className=""
+          onClick={() =>
+            addToCart({
+              name: data.productName,
+              price: data.price,
+              img: data.images[0],
+              id: data._id,
+            })
+          }
+        >
           <Button content="Add To Cart" />
         </div>
       </div>

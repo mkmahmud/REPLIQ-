@@ -12,7 +12,7 @@ const CheckOut = () => {
   const tax = 30.22;
 
   //   @ts-ignore
-  const grandTotal = parseInt(total) + shipping + tax;
+  const grandTotal = parseInt(parseInt(total) + shipping + tax);
 
   //   Interface
   type Inputs = {

@@ -16,7 +16,7 @@ const Login = () => {
 
   // React hook form
   type Inputs = {
-    id: string;
+    number: string;
     password: string;
   };
 
@@ -34,7 +34,7 @@ const Login = () => {
       setToLocalStorage("access_token", res?.accessToken);
       navigate("/profile");
     } else {
-      setincorrectPassword("Password or Id Not valid");
+      setincorrectPassword("Password or Phone Number Not valid");
     }
   };
   return (
@@ -48,10 +48,10 @@ const Login = () => {
       <form className="my-6" onSubmit={handleSubmit(onSubmit)}>
         <MainInput
           type="text"
-          placeholder="User Id  "
-          icon="fa-envelope"
-          register={register("id", { required: true })}
-          error={errors.id}
+          placeholder="Phone Number  "
+          icon="fa-phone"
+          register={register("number", { required: true })}
+          error={errors.number}
         />
 
         <MainInput

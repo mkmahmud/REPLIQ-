@@ -11,6 +11,7 @@ const Register = ({ setRegister }: any) => {
   type Inputs = {
     fullName: string;
     email: string;
+    phoneNumber: string;
     password: string;
   };
 
@@ -43,6 +44,13 @@ const Register = ({ setRegister }: any) => {
           placeholder="Full Name"
           icon="fa-user"
           register={register("fullName", { required: true })}
+          error={errors.fullName}
+        />
+        <MainInput
+          type="text"
+          placeholder="Phone Number"
+          icon="fa-phone"
+          register={register("phoneNumber", { required: true })}
           error={errors.fullName}
         />
         <MainInput

@@ -12,16 +12,7 @@ const Hero = () => {
     <div className="   ">
       <div className="  flex justify-between items-center relative overflow-hidden h-full">
       {/* Shapes */}
-        <img
-          src={shape2}
-          className="absolute -z-10 top-20 -left-[100px] animate-spin"
-          alt=""
-        />
-        <img
-          src={shape1}
-          className="absolute -z-10 bottom-0 left-[300px] animate-spin   "
-          alt=""
-        />
+      
         {/* <img
           src={shape3}
           className="absolute -z-10 -bottom-[120px] -left-[100px] animate-pulse   "

@@ -35,16 +35,8 @@ const Auth = () => {
               </p>
             </div>
           </div>
-        </div>
-        {/* Dimond shape */}
-        <div
-          className="text-center bg-secondary absolute h-[300px] bottom-0 left-0 w-[300px] "
-          style={{
-            clipPath: " circle(59.6% at 33% 67%)",
-          }}
-        >
-          <img src={img} className="h-full w-full" alt="" />
-        </div>
+        </div> 
+       
         {/* shape */}
         <div
           className="bg-secondary absolute h-[500px] top-0 w-full "

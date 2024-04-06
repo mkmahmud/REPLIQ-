@@ -15,6 +15,10 @@ import Orders from "../pages/Dashboard/Orders/Orders";
 import Customers from "../pages/Dashboard/Customers/Customers";
 import DashBoardProducts from "../pages/Dashboard/Products/Products";
 import CustomerDetails from "../pages/Dashboard/Customers/customerDetails";
+import OrderDetails from "../pages/Dashboard/Orders/OrderDetails";
+import DashProductDetails from "../pages/Dashboard/Products/ProductDetails";
+import AddProduct from "../pages/Dashboard/Products/AddProduct";
+import AddCustomer from "../pages/Dashboard/Customers/AddCustomer";
 
 const router = createBrowserRouter([
   {
@@ -73,12 +77,28 @@ const router = createBrowserRouter([
         element: <CustomerDetails />,
       },
       {
+        path: "/dashboard/customers/add-customer",
+        element: <AddCustomer />,
+      },
+      {
         path: "/dashboard/orders",
         element: <Orders />,
       },
       {
+        path: "/dashboard/orders/:id",
+        element: <OrderDetails />,
+      },
+      {
         path: "/dashboard/products",
         element: <DashBoardProducts />,
+      },
+      {
+        path: "/dashboard/products/:id",
+        element: <DashProductDetails />,
+      },
+      {
+        path: "/dashboard/products/add-product",
+        element: <AddProduct />,
       },
     ],
   },

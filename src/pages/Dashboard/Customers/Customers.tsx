@@ -10,7 +10,7 @@ const Customers = () => {
         <h2 className="text-large text-primary   font-semibold">Customers</h2>
         <div>
           <MainButton
-            path="/dashboard/customers/add"
+            path="/dashboard/customers/add-customer"
             content="Add New User"
             icon="fa-plus"
           />

@@ -14,6 +14,7 @@ import DashboardHome from "../pages/Dashboard/Home";
 import Orders from "../pages/Dashboard/Orders/Orders";
 import Customers from "../pages/Dashboard/Customers/Customers";
 import DashBoardProducts from "../pages/Dashboard/Products/Products";
+import CustomerDetails from "../pages/Dashboard/Customers/customerDetails";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/customers",
         element: <Customers />,
+      },
+      {
+        path: "/dashboard/customers/:id",
+        element: <CustomerDetails />,
       },
       {
         path: "/dashboard/orders",

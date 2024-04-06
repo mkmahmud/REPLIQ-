@@ -113,7 +113,7 @@ const Navbar = () => {
                 onClick={() => {
                   handelLogout();
                 }}
-                className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-4 text-base text-white font-semibold  rounded-full"
+                className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
               >
                 <div className="flex items-center">
                   <span className="mr-4 rotate-180">
@@ -199,7 +199,7 @@ const Navbar = () => {
                   onClick={() => {
                     handelLogout();
                   }}
-                  className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-4 text-base text-white font-semibold  rounded-full"
+                  className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
                 >
                   <div className="flex items-center">
                     <span className="mr-4 rotate-180">

@@ -74,7 +74,7 @@ const Sidebar = () => {
                         : "border-white"
                     }`}
                   >
-                    <Font iconName="fa-home" />{" "}
+                    <Font iconName="fa-o" />{" "}
                     <span className="ml-4"> Order Lists</span>
                   </li>
                 </Link>
@@ -86,7 +86,7 @@ const Sidebar = () => {
                         : "border-white"
                     }`}
                   >
-                    <Font iconName="fa-home" />{" "}
+                    <Font iconName="fa-p" />{" "}
                     <span className="ml-4"> Products</span>
                   </li>
                 </Link>
@@ -98,7 +98,7 @@ const Sidebar = () => {
                         : "border-white"
                     }`}
                   >
-                    <Font iconName="fa-home" />{" "}
+                    <Font iconName="fa-c" />{" "}
                     <span className="ml-4"> Customers</span>
                   </li>
                 </Link>

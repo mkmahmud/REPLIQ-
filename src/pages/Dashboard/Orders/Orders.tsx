@@ -2,6 +2,7 @@ import { useGetOrderQuery } from "../../../redux/api/orders/ordersAPI";
 import MainButton from "../../../components/Buttons/MainButton";
 
 const Orders = () => {
+  // Get All orders
   const { data } = useGetOrderQuery(undefined);
 
   return (

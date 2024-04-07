@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <div>
       <div className="flex justify-between items-center">
-        <h2 className="text-large text-primary   font-semibold">Customers</h2>
+        <h2 className="text-large text-primary   font-semibold">Products</h2>
         <div>
           <MainButton
             path="/dashboard/products/add-product"
@@ -16,7 +16,7 @@ const Products = () => {
           />
         </div>
       </div>
-      {/* Customers */}
+      {/* Products */}
       <div className="p-4 rounded-lg  mt-10">
         <div className="p-2 flex justify-between items-center bg-gray font-semibold">
           <h2>productName</h2>

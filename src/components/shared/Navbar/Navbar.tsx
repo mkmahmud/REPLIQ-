@@ -109,20 +109,25 @@ const Navbar = () => {
         <ul className="flex space-x-4 hidden md:block">
           <li>
             {loggedUser ? (
-              <button
-                onClick={() => {
-                  handelLogout();
-                }}
-                className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
-              >
-                <div className="flex items-center">
-                  <span className="mr-4 rotate-180">
-                    <Font iconName="fa-right-to-bracket"></Font>{" "}
-                  </span>
-                  <span>Log Out</span>{" "}
-                </div>
-                <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-primaryHover opacity-40 group-hover:animate-shine" />
-              </button>
+              <div className="flex items-center">
+                <Link to="/cart" className="mx-4 text-large text-primary">
+                  <Font iconName="fa-shopping-cart"></Font>{" "}
+                </Link>
+                <button
+                  onClick={() => {
+                    handelLogout();
+                  }}
+                  className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
+                >
+                  <div className="flex items-center">
+                    <span className="mr-4 rotate-180">
+                      <Font iconName="fa-right-to-bracket"></Font>{" "}
+                    </span>
+                    <span>Log Out</span>{" "}
+                  </div>
+                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-primaryHover opacity-40 group-hover:animate-shine" />
+                </button>
+              </div>
             ) : (
               <div className="flex items-center">
                 <Link to="/cart" className="mx-4 text-large text-primary">
@@ -195,20 +200,26 @@ const Navbar = () => {
             </div>
             <div>
               {loggedUser ? (
-                <button
-                  onClick={() => {
-                    handelLogout();
-                  }}
-                  className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
-                >
-                  <div className="flex items-center">
-                    <span className="mr-4 rotate-180">
-                      <Font iconName="fa-right-to-bracket"></Font>{" "}
-                    </span>
-                    <span>Log Out</span>{" "}
-                  </div>
-                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-primaryHover opacity-40 group-hover:animate-shine" />
-                </button>
+                <div className="flex items-center">
+                  {" "}
+                  <Link to="/cart" className="mx-4 text-large text-primary">
+                    <Font iconName="fa-shopping-cart"></Font>{" "}
+                  </Link>
+                  <button
+                    onClick={() => {
+                      handelLogout();
+                    }}
+                    className=" group overflow-hidden flex justify-center items-center relative   bg-primary px-6 py-2 text-base text-white font-semibold  rounded-full"
+                  >
+                    <div className="flex items-center">
+                      <span className="mr-4 rotate-180">
+                        <Font iconName="fa-right-to-bracket"></Font>{" "}
+                      </span>
+                      <span>Log Out</span>{" "}
+                    </div>
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-primaryHover opacity-40 group-hover:animate-shine" />
+                  </button>
+                </div>
               ) : (
                 <MainButton
                   path="/auth"

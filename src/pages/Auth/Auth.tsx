@@ -4,8 +4,7 @@ import Register from "../../components/Ui/Auth/Register/Register";
 import Login from "../../components/Ui/Auth/Login/Login";
 import { Link, useNavigate } from "react-router-dom";
 import Font from "../../components/icons/Font";
-import { isLoggedIn } from "../../services/authService";
-import img from "../../assets/book-school.gif";
+import { isLoggedIn } from "../../services/authService"; 
 
 const Auth = () => {
   // Navigate If User logged In

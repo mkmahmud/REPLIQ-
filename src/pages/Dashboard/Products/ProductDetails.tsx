@@ -8,7 +8,6 @@ const ProductDetails = () => {
   // Get Data
 
   const { data } = useGetSingleProductQuery(id);
-  console.log(data);
   return (
     <div>
       <h2 className="text-large text-primary   font-semibold">
@@ -19,7 +18,7 @@ const ProductDetails = () => {
           Details
         </h2>
         <div className="flex my-4">
-          <img src={data?.images[0]} className="h-[200px] mx-auto" alt="" />  
+          <img src={data?.images[0]} className="h-[200px] mx-auto" alt="" />
         </div>
         <div className=" mt-4">
           <h3 className="bg-gray p-2 font-semibold text-lg">

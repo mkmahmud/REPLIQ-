@@ -2,6 +2,7 @@ import MainButton from "../../../components/Buttons/MainButton";
 import { useGetAllUsersQuery } from "../../../redux/api/customers/customersApi";
 
 const Customers = () => {
+  // Get all customers
   const { data } = useGetAllUsersQuery(undefined);
 
   return (

@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Font from "../../../icons/Font";
+ import Font from "../../../icons/Font";
  
 const CartCard = ({ data, deleteFromCart }: any) => {
  

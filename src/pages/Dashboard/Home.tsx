@@ -29,7 +29,7 @@ const Home = () => {
         <div className="p-4 shadow-lg bg-white min-w-[300px] mx-auto border-l-4 border-primary">
           <p className="uppercase">Products</p>
           <h2 className="text-extraLarge text-primary py-2 font-semibold">
-            {products && products.length}
+            {products  && products .length}
              
           </h2>
           <p>Rating this month</p>

@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import CartCard from "../../components/Ui/Card/CartCard/CartCard";
 import { getCartItems, removeCartItemById } from "../../utils/localStorage";
 import MainButton from "../../components/Buttons/MainButton";
+import toast from "react-hot-toast";
 
 const Cart = () => {
+  // Toast
+  const notify = () => toast.success("Product Removed ");
+
   // cart dat
   const [cartData, setCartData] = useState([]);
 
@@ -18,6 +22,7 @@ const Cart = () => {
     setCartData(newData);
     // Remove from local storage CartD
     removeCartItemById(id);
+    notify();
   };
 
   // Total ammount

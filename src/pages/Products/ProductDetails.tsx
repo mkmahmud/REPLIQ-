@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
-import image from "../../assets/images/3456789.webp";
 import Button from "../../components/Buttons/Button";
-import ProductCard from "../../components/Ui/Card/ProductCard/ProductCard";
 import Font from "../../components/icons/Font";
 import { useGetSingleProductQuery } from "../../redux/api/products/productsAPI";
+import { addToCart } from "../../utils/localStorage";
+import Loading from "../../components/Ui/Loading/Loading";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   // Get Product Id form parms
@@ -12,14 +13,24 @@ const ProductDetails = () => {
   // Get Data from DB by Redux
   const { data } = useGetSingleProductQuery(id);
 
+  // Toasr
+  const notify = () => toast.success("Product Added Successfully");
+
   return (
     <div>
+     <div className="mt-20">
+     {!data && <Loading />}
+     </div>
       {data && (
         <div>
           <div className="mt-20"></div>
           <div className="md:flex space-x-2 w-full p-4 items-center">
             <div className="w-full md:w-1/2">
-              <img src={data.images[0]} className="h-[500px] block mx-auto" alt="Image" />
+              <img
+                src={data.images[0]}
+                className="h-[500px] block mx-auto"
+                alt="Image"
+              />
             </div>
             <div className="w-full md:w-1/2 px-4">
               <div>
@@ -59,16 +70,25 @@ const ProductDetails = () => {
               <div className="mb-4 text-primary">
                 <p>${data?.stockQuantity} Items left!</p>
               </div>
-              <div className="">
+              <div
+                className=""
+                onClick={() => {
+                  addToCart({
+                    name: data.productName,
+                    price: data.price,
+                    img: data.images[0],
+                    id: data._id,
+                  });
+                 notify()
+                }}
+              >
                 <Button content="Add To Cart" />
               </div>
             </div>
           </div>
           <div className="my-10">
             <h2 className="text-large">Description: </h2>
-            <p>
-            {data?.description}
-            </p>
+            <p>{data?.description}</p>
           </div>
           {/* Releted Product */}
           <div className="my-10">

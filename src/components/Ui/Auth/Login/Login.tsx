@@ -37,11 +37,36 @@ const Login = () => {
       setincorrectPassword("Password or Phone Number Not valid");
     }
   };
+
+  // Set Default Login
+  const [Logincredentials, setLogincredentials] = useState({
+    phone: "",
+    password: "",
+  });
+
   return (
     <div className="max-w-[400px] mx-auto mt-[150px]">
       <div className="text-center">
         <h2 className="font-bold text-extraLarge">Blossom</h2>
         <p className="text-xl my-4">Sign Into Your Accout</p>
+      </div>
+      <div className="flex justify-center space-x-4">
+        <button
+          className="border-2  px-2 text-lg"
+          onClick={() =>
+            setLogincredentials({ phone: "01309548540", password: "1234" })
+          }
+        >
+          Admin
+        </button>
+        <button
+          className="border-2  px-2 text-lg"
+          onClick={() => {
+            setLogincredentials({ phone: "01741503127", password: "1234" });
+          }}
+        >
+          User
+        </button>
       </div>
       <h2 className="text-xl text-primary text-center">{incorrectPassword}</h2>
       {/* Login Form */}
@@ -50,6 +75,7 @@ const Login = () => {
           type="text"
           placeholder="Phone Number  "
           icon="fa-phone"
+          defaultValue={Logincredentials.phone}
           register={register("number", { required: true })}
           error={errors.number}
         />
@@ -58,6 +84,7 @@ const Login = () => {
           type="password"
           placeholder="Password"
           icon="fa-lock"
+          defaultValue={Logincredentials.password}
           register={register("password", { required: true })}
           error={errors.password}
         />

@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { getUserInfo } from "../../../services/authService";
-import MainButton from "../../Buttons/MainButton";
-import userImage from "../../../assets/user/client-4.jpg";
+import MainButton from "../../Buttons/MainButton"; 
 import Font from "../../icons/Font";
 
 const Sidebar = () => {
@@ -36,7 +35,6 @@ const Sidebar = () => {
           <div className={`h-[100px] bg-${profileBG}`}></div>
           <div>
             <img
-              src={userImage}
               className="h-28 w-28 rounded-full p-1 border border-secondary mx-auto -mt-14 bg-white"
               alt="User Image"
             />

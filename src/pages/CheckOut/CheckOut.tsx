@@ -4,6 +4,7 @@ import Button from "../../components/Buttons/Button";
 import { useParams } from "react-router-dom";
 import { getCartItems } from "../../utils/localStorage";
 import { useCreateOrderMutation } from "../../redux/api/orders/ordersAPI";
+import toast from "react-hot-toast";
 
 const CheckOut = () => {
   //   Get Total
@@ -33,11 +34,17 @@ const CheckOut = () => {
   //   Submit By Redux
   const [createOrder] = useCreateOrderMutation();
 
+  // Toast
+  const notify = () => toast.success("Order Placed Successfully");
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     data.totalPrice = grandTotal;
     data.products = getCartItems();
     const result = await createOrder(data);
-    console.log(result);
+    // @ts-ignore
+    if (result?.data) {
+      notify();
+    }
   };
   return (
     <div>

@@ -38,7 +38,7 @@ const Navbar = () => {
     { title: "home", dropdown: null },
     { title: "products", dropdown: null },
     {
-      title: "Courses",
+      title: "Category",
       dropdown: [
         {
           title: "Web-development",

@@ -14,11 +14,11 @@ import DashboardHome from "../pages/Dashboard/Home";
 import Orders from "../pages/Dashboard/Orders/Orders";
 import Customers from "../pages/Dashboard/Customers/Customers";
 import DashBoardProducts from "../pages/Dashboard/Products/Products";
-import CustomerDetails from "../pages/Dashboard/Customers/customerDetails";
 import OrderDetails from "../pages/Dashboard/Orders/OrderDetails";
 import DashProductDetails from "../pages/Dashboard/Products/ProductDetails";
 import AddProduct from "../pages/Dashboard/Products/AddProduct";
 import AddCustomer from "../pages/Dashboard/Customers/AddCustomer";
+import CustomerDetails from "../pages/Dashboard/Customers/CustomerDetails";
 
 const router = createBrowserRouter([
   {

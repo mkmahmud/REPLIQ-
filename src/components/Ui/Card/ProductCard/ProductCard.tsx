@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Button from "../../../Buttons/Button";
 import { addToCart } from "../../../../utils/localStorage";
+import toast from "react-hot-toast";
 
 const ProductCard = ({ data }: any) => {
+  const notify = () => toast.success("Product Added Successfully");
+
   return (
     <div className="bg-gray md:w-[350px] rounded mx-auto">
       <Link to={`/product/${data?._id}`}>
@@ -39,14 +42,15 @@ const ProductCard = ({ data }: any) => {
         </div>
         <div
           className=""
-          onClick={() =>
+          onClick={() => {
             addToCart({
               name: data.productName,
               price: data.price,
               img: data.images[0],
               id: data._id,
-            })
-          }
+            });
+            notify();
+          }}
         >
           <Button content="Add To Cart" />
         </div>
